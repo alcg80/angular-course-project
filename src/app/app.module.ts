@@ -5,22 +5,32 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { CartComponent } from './cart/cart.component';
-import { ShippingComponent } from './shipping/shipping.component';
+import { TopBarComponent } from './layout/top-bar/top-bar.component';
+import { ProductsContainerComponent } from './containers/products-container/products-container.component';
+import { ProductDetailContainerComponent } from './containers/product-detail-container/product-detail-container.component';
+import { CartContainerComponent } from './containers/cart-container/cart-container.component';
+import { ShippingContainerComponent } from './containers/shipping-container/shipping-container.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { CartFormComponent } from './components/cart-form/cart-form.component';
+import { ProductComponent } from './components/product/product.component';
+import { ProductItemComponent } from './components/product-item/product-item.component';
+import { ProductAlertsComponent } from './components/product-alerts/product-alerts.component';
+import { ShippingItemComponent } from './components/shipping-item/shipping-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent,
+    ProductsContainerComponent,
+    ProductDetailContainerComponent,
+    CartContainerComponent,
+    ShippingContainerComponent,
+    CartItemComponent,
+    CartFormComponent,
+    ProductComponent,
+    ProductItemComponent,
     ProductAlertsComponent,
-    ProductDetailsComponent,
-    CartComponent,
-    ShippingComponent
+    ShippingItemComponent
   ],
   imports: [BrowserModule, HttpClientModule, ReactiveFormsModule, AppRoutingModule],
   providers: [],

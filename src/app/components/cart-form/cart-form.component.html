@@ -1,0 +1,30 @@
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmitForm()">
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="name" type="text" formControlName="name" />
+
+    <div *ngIf="name.invalid && (name.dirty || name.touched)">
+      <div *ngIf="name.errors['required']">
+        Name is required.
+      </div>
+      <div *ngIf="name.errors['minlength']">
+        Name must be at least 4 characters long.
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="address">
+      Address
+    </label>
+    <input id="address" type="text" formControlName="address" />
+
+    <div *ngIf="address.invalid && (address.dirty || address.touched) && address.errors['required']">
+      Address is required.
+    </div>
+  </div>
+
+  <button class="button" type="submit" [disabled]="!checkoutForm.valid">Purchase</button>
+</form>

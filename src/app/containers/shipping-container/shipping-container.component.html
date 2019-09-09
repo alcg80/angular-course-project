@@ -1,0 +1,5 @@
+<h3>Shipping Prices</h3>
+
+<ng-container *ngFor="let shipping of shippingCosts$ | async">
+  <app-shipping-item [shipping]="shipping"></app-shipping-item>
+</ng-container>

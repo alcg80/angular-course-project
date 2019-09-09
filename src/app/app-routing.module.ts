@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductGuard } from './guards/product.guard';
-import { CartComponent } from './cart/cart.component';
-import { ShippingComponent } from './shipping/shipping.component';
+import { ProductsContainerComponent } from './containers/products-container/products-container.component';
+import { ProductDetailContainerComponent } from './containers/product-detail-container/product-detail-container.component';
+import { CartContainerComponent } from './containers/cart-container/cart-container.component';
+import { ShippingContainerComponent } from './containers/shipping-container/shipping-container.component';
 
 const routes: Routes = [
-  { path: '', component: ProductListComponent },
+  { path: '', component: ProductsContainerComponent },
   {
     path: 'products/:productId',
-    component: ProductDetailsComponent,
+    component: ProductDetailContainerComponent,
     canActivate: [ProductGuard]
   },
-  { path: 'cart', component: CartComponent },
-  { path: 'shipping', component: ShippingComponent }
+  { path: 'cart', component: CartContainerComponent },
+  { path: 'shipping', component: ShippingContainerComponent }
 ];
 
 @NgModule({
