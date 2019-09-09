@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { Product } from 'src/app/models/product.model';
 import { CartService } from 'src/app/services/cart.service';
@@ -6,7 +6,8 @@ import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-cart-container',
   templateUrl: './cart-container.component.html',
-  styleUrls: ['./cart-container.component.scss']
+  styleUrls: ['./cart-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CartContainerComponent implements OnInit {
   items: Product[];

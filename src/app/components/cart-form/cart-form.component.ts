@@ -1,10 +1,11 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-cart-form',
   templateUrl: './cart-form.component.html',
-  styleUrls: ['./cart-form.component.scss']
+  styleUrls: ['./cart-form.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CartFormComponent implements OnInit {
   @Output() submitForm = new EventEmitter<any>();

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 import { Product } from 'src/app/models/product.model';
 import { products } from 'src/app/models/products';
@@ -6,7 +6,8 @@ import { products } from 'src/app/models/products';
 @Component({
   selector: 'app-products-container',
   templateUrl: './products-container.component.html',
-  styleUrls: ['./products-container.component.scss']
+  styleUrls: ['./products-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductsContainerComponent implements OnInit {
   products: Product[] = products;

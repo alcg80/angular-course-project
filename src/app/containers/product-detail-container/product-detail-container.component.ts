@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Product } from 'src/app/models/product.model';
@@ -8,7 +8,8 @@ import { products } from 'src/app/models/products';
 @Component({
   selector: 'app-product-detail-container',
   templateUrl: './product-detail-container.component.html',
-  styleUrls: ['./product-detail-container.component.scss']
+  styleUrls: ['./product-detail-container.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProductDetailContainerComponent implements OnInit {
   product: Product;
