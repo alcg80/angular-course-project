@@ -17,4 +17,8 @@ export class ShippingContainerComponent implements OnInit {
   ngOnInit() {
     this.shippingCosts$ = this.cartService.getShippingPrices();
   }
+
+  trackByFn(index, item) {
+    return index; // or item.id
+  }
 }

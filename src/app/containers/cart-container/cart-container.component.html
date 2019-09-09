@@ -4,7 +4,7 @@
   <a routerLink="/shipping">Shipping Prices</a>
 </p>
 
-<ng-container *ngFor="let item of items">
+<ng-container *ngFor="let item of items; trackBy: trackByFn">
   <app-cart-item [item]="item"></app-cart-item>
 </ng-container>
 

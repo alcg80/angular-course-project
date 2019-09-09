@@ -23,4 +23,8 @@ export class ProductsContainerComponent implements OnInit {
   onProductNotify({ name }) {
     window.alert(`You will be notified when the product ${name} goes on sale`);
   }
+
+  trackByFn(index, item) {
+    return index; // or item.id
+  }
 }

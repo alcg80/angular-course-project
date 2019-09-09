@@ -23,4 +23,8 @@ export class CartContainerComponent implements OnInit {
     console.log('Your order has been submitted', name, address);
     this.items = this.cartService.clearCart();
   }
+
+  trackByFn(index, item) {
+    return index; // or item.id
+  }
 }
