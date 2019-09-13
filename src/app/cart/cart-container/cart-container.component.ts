@@ -1,7 +1,6 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
-import { Product } from 'src/app/shared/models/product.model';
-import { CartService } from 'src/app/shared/services/cart.service';
+import { Product, CartService } from '@app/shared';
 
 @Component({
   selector: 'app-cart-container',
