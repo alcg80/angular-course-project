@@ -1,0 +1,6 @@
+<h2>Products</h2>
+
+<ng-container *ngFor="let product of products; trackBy: trackByFn">
+  <app-product-item [product]="product" (shared)="share(product)" (notify)="onProductNotify(product)">
+  </app-product-item>
+</ng-container>
