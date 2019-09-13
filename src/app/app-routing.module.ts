@@ -1,21 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { ProductGuard } from './guards/product.guard';
-import { ProductsContainerComponent } from './containers/products-container/products-container.component';
-import { ProductDetailContainerComponent } from './containers/product-detail-container/product-detail-container.component';
-import { CartContainerComponent } from './containers/cart-container/cart-container.component';
-import { ShippingContainerComponent } from './containers/shipping-container/shipping-container.component';
+import { ShippingContainerComponent } from './shipping/shipping-container/shipping-container.component';
 
 const routes: Routes = [
-  { path: '', component: ProductsContainerComponent },
-  {
-    path: 'products/:productId',
-    component: ProductDetailContainerComponent,
-    canActivate: [ProductGuard]
-  },
-  { path: 'cart', component: CartContainerComponent },
-  { path: 'shipping', component: ShippingContainerComponent }
+  { path: '', pathMatch: 'full', redirectTo: '/products' },
+  { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
+  { path: 'cart', loadChildren: () => import('./cart/cart.module').then(m => m.CartModule) },
+  { path: 'shipping', loadChildren: () => import('./shipping/shipping.module').then(m => m.ShippingModule) }
 ];
 
 @NgModule({
