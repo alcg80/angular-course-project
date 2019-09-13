@@ -1,0 +1,11 @@
+<h3>Cart</h3>
+
+<p>
+  <a routerLink="/shipping">Shipping Prices</a>
+</p>
+
+<ng-container *ngFor="let item of items; trackBy: trackByFn">
+  <app-cart-item [item]="item"></app-cart-item>
+</ng-container>
+
+<app-cart-form (submitForm)="onSubmit($event)"></app-cart-form>
