@@ -6,9 +6,10 @@ import { CartContainerComponent } from './cart-container/cart-container.componen
 import { CartFormComponent } from './components/cart-form/cart-form.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [CartContainerComponent, CartFormComponent, CartItemComponent],
-  imports: [CommonModule, CartRoutingModule, ReactiveFormsModule]
+  imports: [SharedModule, CartRoutingModule]
 })
 export class CartModule {}

@@ -1,9 +1,9 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Product } from 'src/app/models/product.model';
-import { CartService } from 'src/app/services/cart.service';
-import { products } from 'src/app/models/products';
+import { Product } from 'src/app/shared/models/product.model';
+import { CartService } from 'src/app/shared/services/cart.service';
+import { products } from 'src/app/shared/models/products';
 
 @Component({
   selector: 'app-product-detail-container',

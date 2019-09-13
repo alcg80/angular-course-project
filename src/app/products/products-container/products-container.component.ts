@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
-import { Product } from 'src/app/models/product.model';
-import { products } from 'src/app/models/products';
+import { Product } from 'src/app/shared/models/product.model';
+import { products } from 'src/app/shared/models/products';
 
 @Component({
   selector: 'app-products-container',
